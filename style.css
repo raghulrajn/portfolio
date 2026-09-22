@@ -1,24 +1,5 @@
 /* ---------- Design tokens ---------- */
 :root {
-  --bg: #0a0e14;
-  --bg-elev: #10151f;
-  --bg-elev-2: #161d2b;
-  --text: #eef1f6;
-  --text-dim: #9aa4b6;
-  --text-faint: #626d82;
-  --accent: #5eead4;
-  --accent-2: #7dd3fc;
-  --accent-warm: #fbbf6b;
-  --border: rgba(255,255,255,0.08);
-  --border-strong: rgba(255,255,255,0.16);
-  --shadow: 0 20px 60px rgba(0,0,0,0.45);
-  --radius: 16px;
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-  color-scheme: dark;
-}
-
-:root[data-theme="light"] {
   --bg: #f6f7fb;
   --bg-elev: #ffffff;
   --bg-elev-2: #eef0f7;
@@ -31,25 +12,26 @@
   --border: rgba(10,15,25,0.08);
   --border-strong: rgba(10,15,25,0.16);
   --shadow: 0 20px 60px rgba(20,25,40,0.10);
+  --radius: 16px;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: #f6f7fb;
-    --bg-elev: #ffffff;
-    --bg-elev-2: #eef0f7;
-    --text: #12151c;
-    --text-dim: #4a5265;
-    --text-faint: #8890a0;
-    --accent: #0f9d84;
-    --accent-2: #0284c7;
-    --accent-warm: #c2760a;
-    --border: rgba(10,15,25,0.08);
-    --border-strong: rgba(10,15,25,0.16);
-    --shadow: 0 20px 60px rgba(20,25,40,0.10);
-    color-scheme: light;
-  }
+:root[data-theme="dark"] {
+  --bg: #0a0e14;
+  --bg-elev: #10151f;
+  --bg-elev-2: #161d2b;
+  --text: #eef1f6;
+  --text-dim: #9aa4b6;
+  --text-faint: #626d82;
+  --accent: #5eead4;
+  --accent-2: #7dd3fc;
+  --accent-warm: #fbbf6b;
+  --border: rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.16);
+  --shadow: 0 20px 60px rgba(0,0,0,0.45);
+  color-scheme: dark;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -124,8 +106,8 @@ a { color: inherit; text-decoration: none; }
 }
 .theme-toggle:hover { border-color: var(--accent); transform: rotate(15deg); }
 .icon-moon { display: none; }
-:root[data-theme="light"] .icon-sun { display: none; }
-:root[data-theme="light"] .icon-moon { display: block; }
+:root[data-theme="dark"] .icon-sun { display: none; }
+:root[data-theme="dark"] .icon-moon { display: block; }
 
 .nav-toggle {
   display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px;
