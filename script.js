@@ -26,9 +26,9 @@ window.addEventListener('scroll', () => {
 // ---------- Typed role text ----------
 const roles = [
   'GPU / CUDA Acceleration',
-  'C++ Systems Engineering',
-  'Hardware-Integrated Systems',
-  'Point Cloud Deep Learning'
+  'C++ Software Engineering',
+  'Linux Yocto BSP Development',
+  'Custom Linux Images / Driver Integration',
 ];
 const typedEl = document.getElementById('typedRole');
 let roleIdx = 0, charIdx = 0, deleting = false;
